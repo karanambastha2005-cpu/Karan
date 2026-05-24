@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,
+initial-scale=1.0" />
+    <title>Animated Login Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            font-family: 'Lucida Calligraphy';
+            font-size: 50px;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(lightgray,blue);
+        }
+
+        .login-box {
+            width: 320px;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+            .login-box h2 {
+                text-align: center;
+                margin-bottom: 30px;
+                color: #333;
+            }
+
+        .input-box {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+            .input-box input {
+                width: 100%;
+                padding: 12px;
+                border: none;
+                border-bottom: 2px solid #999;
+                outline: none;
+                font-size: 16px;
+                background: transparent;
+                transition: 0.3s;
+            }
+
+            .input-box label {
+                position: absolute;
+                left: 0;
+                top: 12px;
+                color: #777;
+                pointer-events: none;
+                transition: 0.3s ease;
+            }
+            /* Animation on click/focus */
+            .input-box input:focus + label,
+            .input-box input:valid + label {
+                top: -10px;
+                font-size: 13px;
+                color: #667eea;
+            }
+
+            .input-box input:focus {
+                border-bottom: 2px solid #667eea;
+                transform: scale(1.03);
+            }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(lightgray,blue);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+            button:hover {
+                background: #5a67d8;
+                transform: translateY(-2px);
+            }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2 style="color:darkblue">Welcome</h2>
+        <div class="input-box">
+            <input type="text" required>
+            <label>Username</label>
+        </div>
+        <div class="input-box">
+            <input type="password" required>
+            <label>Password</label>
+        </div>
+        <button>Login</button>
+        <br /><br />
+        <a href="
+           SnapV2.html"><button>Home</button></a>
+    </div>
+</body>
+</html>
